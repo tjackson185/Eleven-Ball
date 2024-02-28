@@ -471,7 +471,7 @@ font-weight: bold;
     height: 23%;
     display: inline-block; /* Display icon as inline block */
    
-    background: url('/images/countDownList.png');
+    background: url('./images/countDownList.png');
      /*z-index: 0;  */
     overflow: hidden;
 }
