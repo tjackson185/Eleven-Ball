@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/mainstyle.css" />
+    <script src="/javascript/mainscript.js" defer ></script>
+    <title>Eleven Ball</title>
+</head>
+<body onload="startDisplay()">
+    <div id="mainContainer" class="maincontainer">
+        <div id="informatioArea" class="information-area">
+            <div id="info" class="info-item">
+                <span>Round</span>
+                <span id="round"></span>
+            </div>
+            <div id="scoreBlock" class="score-item">
+                <div class="score-set">
+                    <span>High Score</span>
+                    <span id="highScore"></span>
+                </div>
+                <div class="score-set">
+                    <span>Score</span>
+                    <span id="score"></span>
+                </div>
+            </div>
+            <div id="timer" class="timer-item">
+                <div id="menuBar" class="menu-bar">
+                    <div class="dropdown">
+                        <button class="dropbtn">Difficulty &#9660;</button>
+                        <div class="dropdown-content">
+                          <span onmousedown="clearTimer()" onmouseup ="resetDisplay();">New Game</span>
+                          <span onmousedown="clearTimer()" onmouseup ="selectDifficulty('easy')">Easy</span>
+                          <span onmousedown="clearTimer()" onmouseup ="selectDifficulty('normal')">Normal</span>
+                          <span onmousedown="clearTimer()" onmouseup ="selectDifficulty('hard')">Hard</span>
+                        </div>
+                      </div>
+                      <span id="difficulty" class="diff-display"></span>
+                      <span id="sound" class="sound-item" onclick="updateSoundState()">🔈</span>
+                      <span id="help" class="help-item" onclick="openHelp()">?</span>
+                </div>
+                    <span class="timer-item txt-timer">Timer</span>
+                    <span class="timer-item txt-end">0</span><span class="timer-item txt-quarter">25%</span>
+                    <span class="timer-item txt-half">50%</span><span class="timer-item txt-three-quarter">75%</span>
+                    <span class="timer-item txt-start">100%</span>
+                    
+                <div id="timeingPanel" class="timer-item-part timer-panel">
+                <div class="timer-item-part timer-part"></div>
+                    <div id="timerBar" class="timer-item-part timer-part-two"><div class="timer-meter"></div></div>
+                </div>
+            </div>
+        </div>
+        <div id="gameAreaContainer" class="game-area-container">
+            <div id="gameInnerAreaContainer" class="game-inner-area">
+                <div id="pocketOne" class="pocket-item pocket-one"></div>
+                <div id="pocketTwo" class="pocket-item pocket-two"></div>
+                <div id="pocketThree" class="pocket-item pocket-three"></div>
+                <div id="pocketFour" class="pocket-item pocket-four"></div>
+                <div id="pocketFive" class="pocket-item pocket-five"></div>
+                <div id="pocketSix" class="pocket-item pocket-six"></div>
+                <div id="centerDisplay" class="center-item"></div>
+                <div id="totalBalls" class="total-balls"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

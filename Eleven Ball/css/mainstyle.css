@@ -1,0 +1,549 @@
+*,*::after::before{
+  box-sizing: border-box;  
+}
+:root{
+    --one-ball:yellow;
+    --two-ball:blue;
+    --three-ball:red;
+    --four-ball:purple;
+    --five-ball:orange;
+    --six-ball:rgb(11, 83, 11);
+    --seven-ball:maroon;
+    --eight-ball:black;
+    --nine-ball: yellow;
+    --ten-ball: blue;
+    --ball-commen:white;
+}
+body{
+    background: darkgreen;
+    background-color: darkgreen;
+}
+
+.maincontainer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.information-area{   
+    display: flex;
+    flex-direction: row;    
+    width: 100%;
+    height: 18%;
+    background: linear-gradient( to bottom right,rgb(9, 48, 4),rgb(56, 122, 56));
+    background-color: linear-gradient(to bottom right,rgb(9, 48, 4),rgb(56, 122, 56));
+    color: gold;
+    font-weight: bold;
+   
+}
+
+.info-item{    
+ flex-grow: 1;
+ display: flex;
+ flex-direction: column;
+ justify-content:start;
+ text-align: center;
+ font-size: 20px;
+}
+.score-item{
+flex-grow: 2;
+display: flex;
+flex-direction: row;
+ justify-content: space-between;
+}
+.score-set{
+ display: flex;
+ flex-direction: column; 
+ font-size: 20px;
+}
+
+.timer-item{
+flex-grow: 4;
+color: gold;
+font-weight: bold;
+}
+
+.timer-item-part{
+    height: 10%;
+    width: 40%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position:relative;
+    left: 55%;
+    top:20%;
+    
+} 
+.timer-panel{    
+    /*background: rgb(146, 146, 144); 
+    overflow:hidden;*/
+}
+
+.timer-part{
+    /**/
+    position:relative;
+    left: 0%;
+    top: 100%;
+    width: 100%;
+    height:100%;
+    background: rgb(146, 146, 144);
+    /*border: solid black 1px;
+    overflow:hidden;*/
+}
+
+.timer-part-two{
+    /**/
+    position:relative;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height:100%;
+    background-color: rgb(146, 146, 144);
+    z-index: 0;
+    /*border: solid black 1px;
+     animation: timerMeter 30s reverse;*/
+}
+
+.timer-meter{
+    height: auto;
+   
+}
+.txt-timer{    
+    position:relative;
+    left: 71%;
+    top: 10%;
+    font-size: 20px;
+}
+.txt-start{
+    position:relative;
+    left: 68%;
+    top: 30%;
+}
+.txt-three-quarter{
+    position:relative;
+    left: 65%;
+    top: 30%;
+}
+.txt-half{
+    position:relative;
+    left: 59%;
+    top: 30%;
+}
+.txt-quarter{
+    position:relative;
+    left: 54%;
+    top: 30%;
+}
+.txt-end{
+    position:relative;
+    left: 46%;
+    top: 30%;
+}
+
+.btn-timer{
+    position: relative;
+    top:3%;
+    left:30%;
+    width: 10%;
+    height:38%;
+    border-radius:60%;
+    background: red;
+    color: yellow;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-timer:hover{
+    background: rgb(170, 12, 12);
+
+}
+.btn-timer:active{
+    border: solid black 5px;
+    font-weight: bolder;
+}
+
+.menu-bar{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.dropbtn {
+    background-color: #032904;
+    color: yellow;
+    padding: 1px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    left: 10%;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    color: black;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    cursor: pointer;
+  }
+  
+  .dropdown-content span {
+    color: black;
+    padding: 8px 10px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .dropdown-content span:hover {background-color: rgb(187, 182, 182);}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #032904;}
+
+  .dropdown-content span:active {background-color: rgb(184, 133, 133);}
+
+.diff-display{
+    position: relative;
+    left: 15%;
+}
+.sound-item{
+    position: relative;
+    left: 20%; 
+    font-size: large;
+    cursor: pointer;
+}
+.help-item{
+    position: relative;
+    left: 25%; 
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 60%;
+    width: 3%;
+    text-align: center;
+    cursor: pointer;
+}
+.help-item:hover{
+    background-color: yellow;
+    color: #032904;
+}
+.help-item:active{
+    color: chartreuse;
+}
+
+.game-area-container{
+    position: relative;
+    width: 99%;
+    height: 99%;
+    border: solid brown 6px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.game-inner-area{
+    position:   absolute;   
+    background-color: rgb(7, 124, 7);
+    width: 99.5%;
+    height: 99%;
+    border: solid rgb(1, 39, 1) 4px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.pocket-item{
+    position: absolute;
+    width: 3%;
+    height: 5%;
+    background: radial-gradient(circle,rgb(0, 0, 0), rgb(146, 146, 144), rgb(0, 0, 0));
+    background-color: radial-gradient(circle,rgb(0, 0, 0), rgb(146, 146, 144), rgb(0, 0, 0));
+    border-radius: 80%;
+    border-top-left-radius: 60%;
+    border-bottom-left-radius: 60%;
+    border-bottom-right-radius: 60%;
+    border-top-right-radius: 60%;/**/
+}
+
+.pocket-one{
+    top: 0%;
+    left: 0%;
+}
+.pocket-two{
+    top: 0%;
+    left: 50%;
+}
+.pocket-three{
+    top: 0%;
+    left: 97%;
+}
+.pocket-four{
+    top: 95%;
+    left: 0%;
+}
+.pocket-five{
+    top: 95%;
+    left: 50%;
+}
+.pocket-six{
+    top: 95%;
+    left: 97%;
+}
+
+
+
+.ball-item{
+    position: absolute;
+    width: 10.5%;
+    height: 15.5%;
+    border-radius: 60%;
+    animation: ballSelected 1.25s infinite linear;
+    cursor: pointer;
+}
+
+.ball-number{
+    position: relative;
+    padding: 10%;
+    top: 28%;
+    left: 29%;
+    width: 20%;
+    height: 20%;
+    border:solid black 1px;
+    border-radius: 60%; 
+    font-size:140%;
+    font-weight: bold;
+    text-align: center;
+    background: var(--ball-commen);
+    background-color: var(--ball-commen);
+}
+
+.nine-hi-ball{
+    position: absolute;
+    top: 16%;
+    left: .25%;
+    padding: 10%;
+    width: 80%;
+    height: 45%;
+    border-radius: 45%;
+    background: var(--nine-ball);
+}
+.ten-hi-ball{
+    position: absolute;
+    top: 16%;
+    left: .25%;
+    padding: 10%;
+    width: 80%;
+    height: 45%;
+    border-radius: 45%;
+    background: var(--ten-ball);
+}
+
+.one-ball{background: var(--one-ball);}
+.two-ball{background: var(--two-ball);}
+.three-ball{background: var(--three-ball);}
+.four-ball{background: var(--four-ball);}
+.five-ball{background: var(--five-ball);}
+.six-ball{background: var(--six-ball);}
+.seven-ball{background: var(--seven-ball);}
+.eight-ball{background: var(--eight-ball);}
+.nine-ball{background: var(--ball-commen);}
+.ten-ball{background: var(--ball-commen);}
+
+.btn-item{
+    position: relative;
+    top:86%;
+    left:30%;
+    width: 7%;
+    height: 10%;
+    border-radius:60%;
+    background: red;
+    color: yellow;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-item:hover{
+    background: rgb(170, 12, 12);
+
+}
+.btn-item:active{
+    border: solid black 5px;
+    font-size: larger;
+}
+
+.center-item{
+    position: absolute;
+    top: 48%;
+    left: 49%;
+    color: gold;
+    font-size: 345%;
+}
+
+.total-balls{
+    position: absolute;
+    top: 83%;
+    left: 90%;
+    color: gold;
+    font-size: 345%;
+}
+
+.progress-sheet{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    background-color: transparent;
+    z-index: 0;
+}
+.sheet-info{
+    position: relative;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    color: gold;
+    text-align: center;
+    font-size: 3pc;
+    font-weight: bolder;
+    background-color: darkgreen;
+    background: darkgreen;
+}
+.sheet-header{
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    width: 50%;
+    height: 50%; 
+}
+.sheet-content{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    color: rgb(255,215,0); 
+    font-size: 30px; 
+    background: transparent; 
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, rgb(0, 107, 0) 0px 0px 20px, rgb(0, 107, 0) 0px 0px 30px, rgb(0, 107, 0) 0px 0px 40px, rgb(0, 107, 0) 0px 0px 50px, rgb(0, 107, 0) 0px 0px 75px;
+}
+.btn-restart{
+    position: absolute;
+    top: 75%;
+    left: 35%;
+    width: 30%;
+    height: 15%;
+    color: gold;
+    font-weight: bold;
+    background: red;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+.btn-restart:hover{
+    background-color: rgb(163, 41, 41);
+}
+.btn-restart:active{
+    font-weight: bolder;
+    border: solid black 4px; 
+}
+
+.count-down-bkgrd{
+    position: absolute;
+    top: 74%;
+    left: 50%;
+    width: 5%;
+    height: 23%;
+    display: inline-block; /* Display icon as inline block */
+   
+    background: url('/images/countDownList.png');
+     /*z-index: 0;  */
+    overflow: hidden;
+}
+.count-down{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 10%;
+    height: 15%;
+    
+    /*color: whitergba(0, 0, 0, 0.5);;
+    background-color: darkgreen;
+    background: darkgreen;
+    font-size: 2pc;   
+    z-index: 1;*/
+   /* mix-blend-mode: multiply;*/
+}
+
+.help-doc{
+    position:absolute;
+    top: 0;
+    left: 5%;
+    width: 92%;
+    height: 98%;
+    z-index: 0;
+}
+.help-doc-frame{
+position: relative;
+top: 0;
+left: 0;
+border: none;
+width: 100%;
+height: 90%;
+}
+.help-doc-btn{
+position:relative;
+left: 37%;
+bottom: 0;
+width: 25%;
+height: 8%;
+background-color: gold;
+font-size: larger;
+font-weight: bolder;
+color:#032904;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+border-top-right-radius: 10px;
+cursor: pointer;
+}
+
+/**Key Animations***/
+
+@keyframes ballSelected {
+    50% {opacity: .5;}
+  }
+
+@keyframes timerMeter {
+    100%{background-color: rgb(47, 160, 47); width: 100%;}
+    75%{background-color: chartreuse; width: 75%;}
+    50%{background-color: rgb(186, 233, 57); width: 50%;}
+    35%{background-color: yellow; width: 35%;}
+    20%{background-color: rgb(223, 178, 31); width: 20%;}
+    5%{background-color: red; width: 5%;}
+    0%{background-color: red; width: 0%;}
+}
+
+@keyframes countDownTimer {    
+    100%{ background-position:  25px -270px;}
+    80%{ background-position:  75px -270px;}
+    60%{ background-position:  125px -270px;}
+    40%{ background-position:  175px -270px;}
+    20%{ background-position:  225px -270px;}
+    0%{ background-position:  275px -270px;}
+}
