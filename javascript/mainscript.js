@@ -657,7 +657,7 @@ function cycleBall(){
     console.log("%cButton Pressed","color:green; font-weight:bold; background:yellow;")
     let ball = PoolBall;
     let btn = btnCycleBalls;
-    let soundFX_cycleBall = new sound("/sounds/BREAK01.WAV");
+    let soundFX_cycleBall = new sound("./sounds/BREAK01.WAV");
     const ballsTotal = document.getElementById('totalBalls');
 
     if(soundState == true){       
@@ -690,8 +690,8 @@ function cycleBall(){
 function ballSelected(name,value){
     //console.log("Name: %c"+ name + "%c Value: %c "+ value,  "color:lightgreen;","color:white;","color:lightgreen;");
     const selectedBallsTotal = document.getElementById('centerDisplay');
-    let soundFx_selecBall = new sound("/sounds/STAPLER.WAV");
-    let soundFx_ballIpocket = new sound("/sounds/BREAK02.WAV");
+    let soundFx_selecBall = new sound("./sounds/STAPLER.WAV");
+    let soundFx_ballIpocket = new sound("./sounds/BREAK02.WAV");
     let ball = document.getElementById(name);
     let pball = PoolBall;
     let isBallSelected = false;
